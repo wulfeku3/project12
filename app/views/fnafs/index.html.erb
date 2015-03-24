@@ -1,0 +1,54 @@
+<center>
+
+<p>
+<%= link_to 'Home', root_path %> |
+<%= link_to 'About', about_path %> |
+<%= link_to 'Character Directory', fnafs_path %>
+</p>
+
+<hr>
+
+<h1>Meet the Characters</h1>
+
+<p> If you'd like, you can even add your own OC by clicking 'New Character' at the botom of this page and filling in the information. It won't actually put him in the game, but you can pretend he's in there by placing him in the database.</p>
+
+<hr>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Picture</th>
+      <th>Species</th>
+      <th>Gender |</th>
+      <th>First Game |</th>
+      <th>Second Game |</th>
+      <th>Third Game</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fnafs.each do |fnaf| %>
+      <tr>
+        <td><%= fnaf.name %></td>
+        <td><%= image_tag fnaf.picture %></td>
+        <td><%= fnaf.species %></td>
+        <td><%= fnaf.gender %></td>
+        <td><%= fnaf.first_game %></td>
+        <td><%= fnaf.second_game %></td>
+        <td><%= fnaf.third_game %></td>
+        <td><%= link_to 'Show', fnaf %></td>
+        <td><%= link_to 'Edit', edit_fnaf_path(fnaf) %></td>
+        <td><%= link_to 'Destroy', fnaf, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<hr>
+
+<%= link_to 'Add Character', new_fnaf_path %>
+</center>

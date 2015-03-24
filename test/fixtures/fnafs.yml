@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyText
+  picture: 
+  species: MyText
+  gender: MyText
+  first_game: false
+  second_game: false
+  third_game: false
+
+two:
+  name: MyText
+  picture: 
+  species: MyText
+  gender: MyText
+  first_game: false
+  second_game: false
+  third_game: false

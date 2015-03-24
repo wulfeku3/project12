@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @fnaf.name %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= @fnaf.picture %>
+</p>
+
+<p>
+  <strong>Species:</strong>
+  <%= @fnaf.species %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @fnaf.gender %>
+</p>
+
+<p>
+  <strong>First game:</strong>
+  <%= @fnaf.first_game %>
+</p>
+
+<p>
+  <strong>Second game:</strong>
+  <%= @fnaf.second_game %>
+</p>
+
+<p>
+  <strong>Third game:</strong>
+  <%= @fnaf.third_game %>
+</p>
+
+<%= link_to 'Edit', edit_fnaf_path(@fnaf) %> |
+<%= link_to 'Back', fnafs_path %>

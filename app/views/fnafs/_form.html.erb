@@ -1,0 +1,45 @@
+<%= form_for(@fnaf) do |f| %>
+  <% if @fnaf.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fnaf.errors.count, "error") %> prohibited this fnaf from being saved:</h2>
+
+      <ul>
+      <% @fnaf.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_area :name %>
+  </div>
+  <div class="field">
+    <%= f.label :picture %><br>
+    <%= f.text_field :picture %>
+  </div>
+  <div class="field">
+    <%= f.label :species %><br>
+    <%= f.text_area :species %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br>
+    <%= f.text_area :gender %>
+  </div>
+  <div class="field">
+    <%= f.label :first_game %><br>
+    <%= f.check_box :first_game %>
+  </div>
+  <div class="field">
+    <%= f.label :second_game %><br>
+    <%= f.check_box :second_game %>
+  </div>
+  <div class="field">
+    <%= f.label :third_game %><br>
+    <%= f.check_box :third_game %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
