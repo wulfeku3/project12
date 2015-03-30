@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150323201225) do
+ActiveRecord::Schema.define(version: 20150330201547) do
 
   create_table "fnafs", force: true do |t|
     t.text     "name"
@@ -21,6 +21,13 @@ ActiveRecord::Schema.define(version: 20150323201225) do
     t.boolean  "first_game"
     t.boolean  "second_game"
     t.boolean  "third_game"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "email"
+    t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

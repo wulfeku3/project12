@@ -1,8 +1,15 @@
 FnafApp::Application.routes.draw do
-   root 'static#home'
-  get '/fnafs' => 'fnafs#index'
-  get '/about' => 'static#about'
+
+  resources :sessions, only: [:new, :create, :destroy]
   resources :fnafs
+
+  root 'static#home'
+  get '/about' => 'static#about'
+  get '/sign-in' => 'sessions#new', as: "sign_in"
+  delete '/sign-out' => 'sessions#destroy', as: "sign_out"
+
+  # get '/sign-in' => 'sessions#new'
+  # delete '/sign-out' => 'sessions#destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
