@@ -35,5 +35,7 @@
   <%= @fnaf.third_game %>
 </p>
 
+<% if user_signed_in? %>
 <%= link_to 'Edit', edit_fnaf_path(@fnaf) %> |
+<% end %>
 <%= link_to 'Back', fnafs_path %>
